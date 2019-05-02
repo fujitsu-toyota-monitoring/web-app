@@ -1,0 +1,10 @@
+/* Dashboard datepicker */
+.ui-monthpicker .ui-monthpicker-month {
+	text-transform: uppercase;
+	width: 18.3% !important;
+}
+.ui-datepicker select.ui-datepicker-year {
+	width: 80% !important;
+	padding-left: 21%;
+}
+/*----------------------------------------------*/

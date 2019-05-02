@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"  
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui">
+ 
+<ui:composition template="/WEB-INF/templates/main.xhtml">
+
+	<ui:define name="content">
+		<div id="layout-portlets-cover">
+			<div class="Container50 Responsive100">
+				<div class="Container100">
+					<div class="ContainerIndent">
+						<div class="Card">
+							<div class="CardTopic"> 
+								<i class="fa fa-line-chart Fs30 Fleft MarRight10"></i>
+                            	<div class="EmptyBox10 ShowOnMobile"></div>
+                            	<h:outputText value="SVT"/>
+                            	<br/>
+                            	<span class="CardSubTopic">Sistema de vendas Toyota</span> 
+                            </div>
+                            <div class="SeparatorFull"></div>
+                            <div class="Container50 Responsive50">
+	                            <div class="ContainerIndent">
+	                            	<h:commandLink>
+		                                <div class="Card SoftGrayBack">
+		                                    <i class="icon-transfer Fs40 Fleft Yellow MarRight10"></i>
+		                                    <div class="Fleft DispInlBlock">
+		                                        <span class="Fs12 FontAdamantiumBold Gray">DEALER C/ ENVIO PENDENTE</span>
+		                                        <br/>
+		                                        <span class="Fs30 FontAdamantiumBold">3</span>
+		                                        <br/>
+		                                        <span class="Fs11 FontAdamantiumRegular Green">Última atualização: 29/04/2019 15:45</span>
+		                                    </div>
+		                                </div>
+	                                </h:commandLink>
+	                            </div>
+                        	</div>
+                        	<div class="Container50 Responsive50">
+	                            <div class="ContainerIndent">
+	                            	<h:commandLink>
+		                                <div class="Card SoftGrayBack">
+		                                    <i class="fa fa-car Fs40 Fleft Orange MarRight10"></i>
+		                                    <div class="Fleft DispInlBlock">
+		                                        <span class="Fs12 FontAdamantiumBold Gray">VEÍCULOS C/ BAIXA PENDENTE</span>
+		                                        <br/>
+		                                        <span class="Fs30 FontAdamantiumBold">4</span>
+		                                        <br/>
+		                                        <span class="Fs11 FontAdamantiumRegular Green">Última atualização: 29/04/2019 15:56</span>
+		                                    </div>
+		                                </div>
+	                                </h:commandLink>
+	                            </div>
+                        	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Container50 Responsive100">
+				<div class="Container100">
+					<div class="ContainerIndent">
+						<div class="Card">
+							<div class="CardTopic"> 
+								<i class="fa fa-connectdevelop Fs30 Fleft MarRight10"></i>
+                            	<div class="EmptyBox10 ShowOnMobile"></div>
+                            	<h:outputText value="SGMP"/>
+                            	<p:datePicker styleClass="Fright Fs13" showIcon="true" id="date-month" view="month" pattern="MM/yyyy" yearNavigator="true" yearRange="2018:2025" />
+                            	<br/>
+                            	<span class="CardSubTopic">Sistema de gestão de melhoria de processos</span>
+        						
+                            </div>
+                            <div class="SeparatorFull"></div>
+                            <div class="Container50 Responsive50">
+	                            <div class="ContainerIndent">
+	                            	<h:commandLink>
+		                                <div class="Card SoftGrayBack">
+		                                    <i class="icon-document-stroke Fs40 Fleft Green MarRight10"></i>
+		                                    <div class="Fleft DispInlBlock">
+		                                        <span class="Fs12 FontAdamantiumBold Gray">ARQUIVOS NÃO RECEBIDOS</span>
+		                                        <br/>
+		                                        <span class="Fs30 FontAdamantiumBold">2</span>
+		                                        <br/>
+		                                        <span class="Fs11 FontAdamantiumRegular Green">Última atualização: 30/04/2019 10:03</span>
+		                                    </div>
+		                                </div>
+	                                </h:commandLink>
+	                            </div>
+                        	</div>
+                        	<div class="Container50 Responsive50">
+	                            <div class="ContainerIndent">
+	                            	<h:commandLink>
+		                                <div class="Card SoftGrayBack">
+		                                    <i class="icon-close Fs40 Fleft Red MarRight10"></i>
+		                                    <div class="Fleft DispInlBlock">
+		                                        <span class="Fs12 FontAdamantiumBold Gray">ERRO NO PROCESSAMENTO</span>
+		                                        <br/>
+		                                        <span class="Fs30 FontAdamantiumBold">3</span>
+		                                        <br/>
+		                                        <span class="Fs11 FontAdamantiumRegular Green">Última atualização: 30/04/2019 10:03</span>
+		                                    </div>
+		                                </div>
+	                                </h:commandLink>
+	                            </div>
+                        	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</ui:define>
+
+</ui:composition>
+
+ 
+</html>

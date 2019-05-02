@@ -16,6 +16,6 @@
   <!-- Tema primefaces -->
   <context-param>
     <param-name>primefaces.THEME</param-name>
-    <param-value>bootstrap</param-value>
+    <param-value>adamantium</param-value>
   </context-param>
 </web-app>
