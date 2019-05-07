@@ -11,6 +11,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
                 
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/database"/>
                 
         <property name="context-root" value="tdb-monitor-web"/>
                 

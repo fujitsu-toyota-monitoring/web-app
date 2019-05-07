@@ -1,3 +1,9 @@
+/* General dashboard*/
+a:hover div.clickable-div {
+	background-color:#d9d9d9;
+}
+/*----------------------------------------------*/
+
 /* Dashboard datepicker */
 .ui-monthpicker .ui-monthpicker-month {
 	text-transform: uppercase;
@@ -6,5 +12,11 @@
 .ui-datepicker select.ui-datepicker-year {
 	width: 80% !important;
 	padding-left: 21%;
+}
+/*----------------------------------------------*/
+
+/* Dashboard carousel */
+.carousel-cell {
+	padding: 10px !important;
 }
 /*----------------------------------------------*/

@@ -9,6 +9,8 @@
 
 	<ui:define name="content">
 		<div id="layout-portlets-cover">
+		
+			<!-- SVT container -->
 			<div class="Container50 Responsive100">
 				<div class="Container100">
 					<div class="ContainerIndent">
@@ -24,8 +26,8 @@
                             <div class="Container50 Responsive50">
 	                            <div class="ContainerIndent">
 	                            	<h:commandLink>
-		                                <div class="Card SoftGrayBack">
-		                                    <i class="icon-transfer Fs40 Fleft Yellow MarRight10"></i>
+		                                <div class="Card clickable-div SoftGrayBack">
+		                                    <i class="fa fa-spinner Fs40 Fleft Yellow MarRight10"></i>
 		                                    <div class="Fleft DispInlBlock">
 		                                        <span class="Fs12 FontAdamantiumBold Gray">DEALER C/ ENVIO PENDENTE</span>
 		                                        <br/>
@@ -40,7 +42,7 @@
                         	<div class="Container50 Responsive50">
 	                            <div class="ContainerIndent">
 	                            	<h:commandLink>
-		                                <div class="Card SoftGrayBack">
+		                                <div class="Card clickable-div SoftGrayBack">
 		                                    <i class="fa fa-car Fs40 Fleft Orange MarRight10"></i>
 		                                    <div class="Fleft DispInlBlock">
 		                                        <span class="Fs12 FontAdamantiumBold Gray">VEÍCULOS C/ BAIXA PENDENTE</span>
@@ -57,6 +59,8 @@
 					</div>
 				</div>
 			</div>
+			
+			<!-- SGMP container -->
 			<div class="Container50 Responsive100">
 				<div class="Container100">
 					<div class="ContainerIndent">
@@ -68,14 +72,13 @@
                             	<p:datePicker styleClass="Fright Fs13" showIcon="true" id="date-month" view="month" pattern="MM/yyyy" yearNavigator="true" yearRange="2018:2025" />
                             	<br/>
                             	<span class="CardSubTopic">Sistema de gestão de melhoria de processos</span>
-        						
                             </div>
                             <div class="SeparatorFull"></div>
                             <div class="Container50 Responsive50">
 	                            <div class="ContainerIndent">
 	                            	<h:commandLink>
-		                                <div class="Card SoftGrayBack">
-		                                    <i class="icon-document-stroke Fs40 Fleft Green MarRight10"></i>
+		                                <div class="Card clickable-div SoftGrayBack">
+		                                    <i class="icon-document-stroke Fs40 Fleft Purple MarRight10"></i>
 		                                    <div class="Fleft DispInlBlock">
 		                                        <span class="Fs12 FontAdamantiumBold Gray">ARQUIVOS NÃO RECEBIDOS</span>
 		                                        <br/>
@@ -90,7 +93,7 @@
                         	<div class="Container50 Responsive50">
 	                            <div class="ContainerIndent">
 	                            	<h:commandLink>
-		                                <div class="Card SoftGrayBack">
+		                                <div class="Card clickable-div SoftGrayBack">
 		                                    <i class="icon-close Fs40 Fleft Red MarRight10"></i>
 		                                    <div class="Fleft DispInlBlock">
 		                                        <span class="Fs12 FontAdamantiumBold Gray">ERRO NO PROCESSAMENTO</span>
@@ -104,6 +107,85 @@
 	                            </div>
                         	</div>
 						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="Container30 Responsive100">
+				<div class="Container100">
+					<div class="ContainerIndent">
+						<div class="Card">
+							Hello World!!
+						</div>	
+						
+					</div>
+				</div>
+			</div>
+			
+			<div class="Container70 Responsive100">
+				<div class="Container100">
+					<div class="ContainerIndent">
+						<div class="Card">
+							<div class="CardTopic"> 
+								<i class="icon-transfer Fs30 Fleft MarRight10"></i>
+                            	<div class="EmptyBox10 ShowOnMobile"></div>
+                            	<h:outputText value="FTP"/>
+                            	<i class="fa fa-spinner Fs15 Fright Yellow MarRigh30"> not transmitted</i>
+                            	<i class="fa fa-close Fs15 Fright Red MarRigh30"> processed with errors</i>
+                            	<i class="fa fa-check Fs15 Fright Green MarRigh30"> successfully processed</i>
+                            	<br/>
+                            	<span class="CardSubTopic">Status das transmissões</span>
+                            	<br/>
+                            	<span class="Fs11 FontAdamantiumRegular Green">Última atualização: 07/05/2019 11:07</span> 
+                            </div>
+                            <div class="SeparatorFull"></div>
+                            <div class="Container100 Responsive100">
+	                            <div class="ContainerIndent">
+									<p:carousel  value="#{dashboardBean.ftpTransmissionList}"  firstVisible="29" numVisible="5" var="ftp" itemStyle="text-align:center" responsive="true">
+										<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+											<f:facet name="header">
+                								<h:outputText style="color:black;" value="#{ftp.date}">
+                									<f:convertDateTime type="date" pattern="dd/MM/yyyy"/>
+                								</h:outputText>  
+            								</f:facet>
+            								<h:commandLink>
+												<div class="Card carousel-cell clickable-div SoftGrayBack">
+				                                    <i class="fa fa-check Fs30 Fleft Green MarRigh30"></i>
+				                                    <div class="Fright MarRight10 DispInlBlock">
+				                                        <span class="Fs30 FontAdamantiumBold">#{ftp.numOfSuccess}</span>
+				                                    </div>
+			                                	</div>
+		                                	</h:commandLink> 
+		                                	<h:commandLink>
+			                                	<div class="Card carousel-cell clickable-div SoftGrayBack">
+				                                    <i class="fa fa-close Fs30 Fleft Red MarRigh30"></i>
+				                                    <div class="Fright MarRight10 DispInlBlock">
+				                                        <span class="Fs30 FontAdamantiumBold">#{ftp.numOfErrors}</span>
+				                                    </div>
+			                                	</div>
+		                                	</h:commandLink>
+		                                	<h:commandLink>
+			                                	<div class="Card carousel-cell clickable-div SoftGrayBack">
+				                                    <i class="fa fa-spinner Fs30 Fleft Yellow MarRigh30"></i>
+				                                    <div class="Fright MarRight10 DispInlBlock">
+				                                        <span class="Fs30 FontAdamantiumBold">#{ftp.numOfNoTransmissions}</span>
+				                                    </div>
+			                                	</div>
+		                                	</h:commandLink>
+										</p:panelGrid>
+									</p:carousel>
+								</div>
+							</div>
+						</div>	
+						
+					</div>
+				</div>
+				<div class="Container100">
+					<div class="ContainerIndent">
+						<div class="Card">
+							SVT!!
+						</div>	
+						
 					</div>
 				</div>
 			</div>
