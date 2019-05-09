@@ -130,7 +130,7 @@
 								<i class="icon-transfer Fs30 Fleft MarRight10"></i>
                             	<div class="EmptyBox10 ShowOnMobile"></div>
                             	<h:outputText value="FTP"/>
-                            	<i class="fa fa-spinner Fs15 Fright Yellow MarRigh30"> not transmitted</i>
+                            	<i class="fa fa-unlink Fs15 Fright Gray MarRigh30"> not transmitted</i>
                             	<i class="fa fa-close Fs15 Fright Red MarRigh30"> processed with errors</i>
                             	<i class="fa fa-check Fs15 Fright Green MarRigh30"> successfully processed</i>
                             	<br/>
@@ -150,25 +150,25 @@
             								</f:facet>
             								<h:commandLink>
 												<div class="Card carousel-cell clickable-div SoftGrayBack">
-				                                    <i class="fa fa-check Fs30 Fleft Green MarRigh30"></i>
+				                                    <i class="fa fa-check Fs27 Fleft Green MarRigh30"></i>
 				                                    <div class="Fright MarRight10 DispInlBlock">
-				                                        <span class="Fs30 FontAdamantiumBold">#{ftp.numOfSuccess}</span>
+				                                        <span class="Fs20 FontAdamantiumBold">#{ftp.numOfSuccess}</span>
 				                                    </div>
 			                                	</div>
 		                                	</h:commandLink> 
 		                                	<h:commandLink>
 			                                	<div class="Card carousel-cell clickable-div SoftGrayBack">
-				                                    <i class="fa fa-close Fs30 Fleft Red MarRigh30"></i>
+				                                    <i class="fa fa-close Fs27 Fleft Red MarRigh30"></i>
 				                                    <div class="Fright MarRight10 DispInlBlock">
-				                                        <span class="Fs30 FontAdamantiumBold">#{ftp.numOfErrors}</span>
+				                                        <span class="Fs20 FontAdamantiumBold">#{ftp.numOfErrors}</span>
 				                                    </div>
 			                                	</div>
 		                                	</h:commandLink>
 		                                	<h:commandLink>
 			                                	<div class="Card carousel-cell clickable-div SoftGrayBack">
-				                                    <i class="fa fa-spinner Fs30 Fleft Yellow MarRigh30"></i>
+				                                    <i class="fa fa-unlink Fs27 Fleft Gray MarRigh30"></i>
 				                                    <div class="Fright MarRight10 DispInlBlock">
-				                                        <span class="Fs30 FontAdamantiumBold">#{ftp.numOfNoTransmissions}</span>
+				                                        <span class="Fs20 FontAdamantiumBold">#{ftp.numOfNoTransmissions}</span>
 				                                    </div>
 			                                	</div>
 		                                	</h:commandLink>
@@ -177,15 +177,53 @@
 								</div>
 							</div>
 						</div>	
-						
 					</div>
 				</div>
 				<div class="Container100">
 					<div class="ContainerIndent">
 						<div class="Card">
-							SVT!!
+							<div class="CardTopic"> 
+								<i class="fa fa-line-chart Fs30 Fleft MarRight10"></i>
+                            	<div class="EmptyBox10 ShowOnMobile"></div>
+                            	<h:outputText value="SVT"/>
+                            	<i class="fa fa-close Fs15 Fright Red MarRigh30"> events with errors</i>
+                            	<i class="fa fa-spinner Fs15 Fright Yellow MarRigh30"> pending events</i>
+                            	<br/>
+                            	<span class="CardSubTopic">Status das transmissões (Monitor dos dealers)</span>
+                            	<br/>
+                            	<span class="Fs11 FontAdamantiumRegular Green">Última atualização: 08/05/2019 15:07</span> 
+                            </div>
+                            <div class="SeparatorFull"></div>
+                            <div class="Container100 Responsive100">
+	                            <div class="ContainerIndent">
+									<p:carousel  value="#{dashboardBean.svtTransmissionList}"  firstVisible="19" numVisible="5" var="svt" itemStyle="text-align:center" responsive="true">
+										<p:panelGrid columns="1" layout="grid" styleClass="ui-panelgrid-blank">
+											<f:facet name="header">
+                								<h:outputText style="color:black;" value="#{svt.date}">
+                									<f:convertDateTime type="date" pattern="dd/MM/yyyy"/>
+                								</h:outputText>  
+            								</f:facet>
+            								<h:commandLink>
+			                                	<div class="Card carousel-cell clickable-div SoftGrayBack">
+				                                    <i class="fa fa-spinner Fs27 Fleft Yellow MarRigh30"></i>
+				                                    <div class="Fright MarRight10 DispInlBlock">
+				                                        <span class="Fs20 FontAdamantiumBold">#{svt.numOfPending}</span>
+				                                    </div>
+			                                	</div>
+		                                	</h:commandLink>
+		                                	<h:commandLink>
+			                                	<div class="Card carousel-cell clickable-div SoftGrayBack">
+				                                    <i class="fa fa-close Fs27 Fleft Red MarRigh30"></i>
+				                                    <div class="Fright MarRight10 DispInlBlock">
+				                                        <span class="Fs20 FontAdamantiumBold">#{svt.numOfErrors}</span>
+				                                    </div>
+			                                	</div>
+		                                	</h:commandLink>
+										</p:panelGrid>
+									</p:carousel>
+								</div>
+							</div>
 						</div>	
-						
 					</div>
 				</div>
 			</div>

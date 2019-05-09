@@ -19,4 +19,8 @@ a:hover div.clickable-div {
 .carousel-cell {
 	padding: 10px !important;
 }
+
+.ui-carousel .ui-carousel-header {
+	background-color: #439fe0 !important;
+}
 /*----------------------------------------------*/

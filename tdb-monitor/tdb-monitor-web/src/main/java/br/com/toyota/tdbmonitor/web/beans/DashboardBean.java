@@ -2,7 +2,6 @@ package br.com.toyota.tdbmonitor.web.beans;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -10,6 +9,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
 import br.com.toyota.tdbmonitor.web.vo.FTPTransmissionStatusVO;
+import br.com.toyota.tdbmonitor.web.vo.SVTTransmissionStatusVO;
 
 @SessionScoped
 @ManagedBean(name = "dashboardBean")
@@ -17,16 +17,22 @@ public class DashboardBean {
 	
 	private List<FTPTransmissionStatusVO> ftpTransmissionList;
 	
+	private List<SVTTransmissionStatusVO> svtTransmissionList;
+	
 	@PostConstruct
 	public void init() {
 		loadDashboardData();
 	}
 	
 	private void loadDashboardData() {
+		populateFTPTransmissionStatus();
+		populateSVTTransmissionStatus();
+	}
+	
+	private void populateFTPTransmissionStatus() {
 		
 		ftpTransmissionList = new ArrayList<FTPTransmissionStatusVO>();
 		Calendar calendar = Calendar.getInstance();
-		
 		
 		FTPTransmissionStatusVO teste1 = new FTPTransmissionStatusVO();
 		calendar.add(Calendar.DATE, -29);
@@ -268,6 +274,155 @@ public class DashboardBean {
 		ftpTransmissionList.add(teste28);
 		ftpTransmissionList.add(teste29);
 		ftpTransmissionList.add(teste30);
+		
+	}
+	
+	private void populateSVTTransmissionStatus() {
+		
+		svtTransmissionList = new ArrayList<SVTTransmissionStatusVO>();
+		Calendar calendar = Calendar.getInstance();
+		
+		SVTTransmissionStatusVO teste1 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, -19);
+		teste1.setDate(calendar.getTime());
+		teste1.setNumOfPending(32548);
+		teste1.setNumOfErrors(5255);
+		
+		SVTTransmissionStatusVO teste2 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste2.setDate(calendar.getTime());
+		teste2.setNumOfPending(57895);
+		teste2.setNumOfErrors(1256);
+		
+		SVTTransmissionStatusVO teste3 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste3.setDate(calendar.getTime());
+		teste3.setNumOfPending(44963);
+		teste3.setNumOfErrors(8423);
+		
+		SVTTransmissionStatusVO teste4 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste4.setDate(calendar.getTime());
+		teste4.setNumOfPending(85348);
+		teste4.setNumOfErrors(3624);
+		
+		SVTTransmissionStatusVO teste5 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste5.setDate(calendar.getTime());
+		teste5.setNumOfPending(75348);
+		teste5.setNumOfErrors(5478);
+		
+		SVTTransmissionStatusVO teste6 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste6.setDate(calendar.getTime());
+		teste6.setNumOfPending(45648);
+		teste6.setNumOfErrors(2301);
+		
+		SVTTransmissionStatusVO teste7 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste7.setDate(calendar.getTime());
+		teste7.setNumOfPending(36858);
+		teste7.setNumOfErrors(7541);
+		
+		SVTTransmissionStatusVO teste8 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste8.setDate(calendar.getTime());
+		teste8.setNumOfPending(15748);
+		teste8.setNumOfErrors(1235);
+		
+		SVTTransmissionStatusVO teste9 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste9.setDate(calendar.getTime());
+		teste9.setNumOfPending(87418);
+		teste9.setNumOfErrors(4255);
+		
+		SVTTransmissionStatusVO teste10 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste10.setDate(calendar.getTime());
+		teste10.setNumOfPending(42148);
+		teste10.setNumOfErrors(3694);
+		
+		SVTTransmissionStatusVO teste11 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste11.setDate(calendar.getTime());
+		teste11.setNumOfPending(20148);
+		teste11.setNumOfErrors(988);
+		
+		SVTTransmissionStatusVO teste12 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste12.setDate(calendar.getTime());
+		teste12.setNumOfPending(17548);
+		teste12.setNumOfErrors(635);
+		
+		SVTTransmissionStatusVO teste13 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste13.setDate(calendar.getTime());
+		teste13.setNumOfPending(26548);
+		teste13.setNumOfErrors(3255);
+		
+		SVTTransmissionStatusVO teste14 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste14.setDate(calendar.getTime());
+		teste14.setNumOfPending(63418);
+		teste14.setNumOfErrors(9521);
+		
+		SVTTransmissionStatusVO teste15 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste15.setDate(calendar.getTime());
+		teste15.setNumOfPending(19848);
+		teste15.setNumOfErrors(2355);
+		
+		SVTTransmissionStatusVO teste16 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste16.setDate(calendar.getTime());
+		teste16.setNumOfPending(36748);
+		teste16.setNumOfErrors(4210);
+		
+		SVTTransmissionStatusVO teste17 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste17.setDate(calendar.getTime());
+		teste17.setNumOfPending(47148);
+		teste17.setNumOfErrors(6325);
+		
+		SVTTransmissionStatusVO teste18 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste18.setDate(calendar.getTime());
+		teste18.setNumOfPending(30214);
+		teste18.setNumOfErrors(4857);
+		
+		SVTTransmissionStatusVO teste19 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste19.setDate(calendar.getTime());
+		teste19.setNumOfPending(35214);
+		teste19.setNumOfErrors(9652);
+		
+		SVTTransmissionStatusVO teste20 = new SVTTransmissionStatusVO();
+		calendar.add(Calendar.DATE, 1);
+		teste20.setDate(calendar.getTime());
+		teste20.setNumOfPending(39548);
+		teste20.setNumOfErrors(4125);
+		
+		svtTransmissionList.add(teste1);
+		svtTransmissionList.add(teste2);
+		svtTransmissionList.add(teste3);
+		svtTransmissionList.add(teste4);
+		svtTransmissionList.add(teste5);
+		svtTransmissionList.add(teste6);
+		svtTransmissionList.add(teste7);
+		svtTransmissionList.add(teste8);
+		svtTransmissionList.add(teste9);
+		svtTransmissionList.add(teste10);
+		svtTransmissionList.add(teste11);
+		svtTransmissionList.add(teste12);
+		svtTransmissionList.add(teste13);
+		svtTransmissionList.add(teste14);
+		svtTransmissionList.add(teste15);
+		svtTransmissionList.add(teste16);
+		svtTransmissionList.add(teste17);
+		svtTransmissionList.add(teste18);
+		svtTransmissionList.add(teste19);
+		svtTransmissionList.add(teste20);
+		
 	}
 
 	public List<FTPTransmissionStatusVO> getFtpTransmissionList() {
@@ -276,5 +431,13 @@ public class DashboardBean {
 
 	public void setFtpTransmissionList(List<FTPTransmissionStatusVO> ftpTransmissionList) {
 		this.ftpTransmissionList = ftpTransmissionList;
+	}
+
+	public List<SVTTransmissionStatusVO> getSvtTransmissionList() {
+		return svtTransmissionList;
+	}
+
+	public void setSvtTransmissionList(List<SVTTransmissionStatusVO> svtTransmissionList) {
+		this.svtTransmissionList = svtTransmissionList;
 	}
 }
